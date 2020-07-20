@@ -5,20 +5,20 @@ goog.i18n.pluralRules.defaultSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.decimals_ = function(n) {
-  var str = n + "";
-  var result = str.indexOf(".");
+  const str = n + "";
+  const result = str.indexOf(".");
   return result == -1 ? 0 : str.length - result - 1;
 };
 goog.i18n.pluralRules.get_vf_ = function(n, opt_precision) {
-  var DEFAULT_DIGITS = 3;
-  var v;
+  const DEFAULT_DIGITS = 3;
+  let v;
   if (undefined === opt_precision) {
     v = Math.min(goog.i18n.pluralRules.decimals_(n), DEFAULT_DIGITS);
   } else {
     v = opt_precision;
   }
-  var base = Math.pow(10, v);
-  var f = (n * base | 0) % base;
+  const base = Math.pow(10, v);
+  const f = (n * base | 0) % base;
   return {v:v, f:f};
 };
 goog.i18n.pluralRules.get_wt_ = function(v, f) {
@@ -32,8 +32,8 @@ goog.i18n.pluralRules.get_wt_ = function(v, f) {
   return {w:v, t:f};
 };
 goog.i18n.pluralRules.filSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && (i == 1 || i == 2 || i == 3) || vf.v == 0 && i % 10 != 4 && i % 10 != 6 && i % 10 != 9 || vf.v != 0 && vf.f % 10 != 4 && vf.f % 10 != 6 && vf.f % 10 != 9) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -55,8 +55,8 @@ goog.i18n.pluralRules.brSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.srSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && i % 10 == 1 && i % 100 != 11 || vf.f % 10 == 1 && vf.f % 100 != 11) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -66,29 +66,29 @@ goog.i18n.pluralRules.srSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.hiSelect_ = function(n, opt_precision) {
-  var i = n | 0;
+  const i = n | 0;
   if (i == 0 || n == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.frSelect_ = function(n, opt_precision) {
-  var i = n | 0;
+  const i = n | 0;
   if (i == 0 || i == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.ptSelect_ = function(n, opt_precision) {
-  var i = n | 0;
+  const i = n | 0;
   if (i >= 0 && i <= 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.csSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (i == 1 && vf.v == 0) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -101,8 +101,8 @@ goog.i18n.pluralRules.csSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.plSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (i == 1 && vf.v == 0) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -115,7 +115,7 @@ goog.i18n.pluralRules.plSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.shiSelect_ = function(n, opt_precision) {
-  var i = n | 0;
+  const i = n | 0;
   if (i == 0 || n == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -125,7 +125,7 @@ goog.i18n.pluralRules.shiSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.lvSelect_ = function(n, opt_precision) {
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19 || vf.v == 2 && vf.f % 100 >= 11 && vf.f % 100 <= 19) {
     return goog.i18n.pluralRules.Keyword.ZERO;
   }
@@ -144,8 +144,8 @@ goog.i18n.pluralRules.iuSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.heSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (i == 1 && vf.v == 0) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -170,8 +170,8 @@ goog.i18n.pluralRules.mtSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.siSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (n == 0 || n == 1 || i == 0 && vf.f == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -196,17 +196,17 @@ goog.i18n.pluralRules.cySelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.daSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
-  var wt = goog.i18n.pluralRules.get_wt_(vf.v, vf.f);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const wt = goog.i18n.pluralRules.get_wt_(vf.v, vf.f);
   if (n == 1 || wt.t != 0 && (i == 0 || i == 1)) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.ruSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && i % 10 == 1 && i % 100 != 11) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -219,8 +219,8 @@ goog.i18n.pluralRules.ruSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.gvSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && i % 10 == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -269,8 +269,8 @@ goog.i18n.pluralRules.esSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.dsbSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && i % 100 == 1 || vf.f % 100 == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -283,7 +283,7 @@ goog.i18n.pluralRules.dsbSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.lagSelect_ = function(n, opt_precision) {
-  var i = n | 0;
+  const i = n | 0;
   if (n == 0) {
     return goog.i18n.pluralRules.Keyword.ZERO;
   }
@@ -293,17 +293,17 @@ goog.i18n.pluralRules.lagSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.mkSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && i % 10 == 1 && i % 100 != 11 || vf.f % 10 == 1 && vf.f % 100 != 11) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.isSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
-  var wt = goog.i18n.pluralRules.get_wt_(vf.v, vf.f);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const wt = goog.i18n.pluralRules.get_wt_(vf.v, vf.f);
   if (wt.t == 0 && i % 10 == 1 && i % 100 != 11 || wt.t != 0) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -319,8 +319,8 @@ goog.i18n.pluralRules.kshSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.roSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (i == 1 && vf.v == 0) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -360,8 +360,8 @@ goog.i18n.pluralRules.gdSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.slSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (vf.v == 0 && i % 100 == 1) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -374,7 +374,7 @@ goog.i18n.pluralRules.slSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.ltSelect_ = function(n, opt_precision) {
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }
@@ -393,8 +393,8 @@ goog.i18n.pluralRules.tzmSelect_ = function(n, opt_precision) {
   return goog.i18n.pluralRules.Keyword.OTHER;
 };
 goog.i18n.pluralRules.enSelect_ = function(n, opt_precision) {
-  var i = n | 0;
-  var vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
+  const i = n | 0;
+  const vf = goog.i18n.pluralRules.get_vf_(n, opt_precision);
   if (i == 1 && vf.v == 0) {
     return goog.i18n.pluralRules.Keyword.ONE;
   }

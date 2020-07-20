@@ -130,3 +130,23 @@ java.net.BindException: Address already in use: JVM_Bind
 2020-07-20 14:51:06,278 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
 2020-07-20 14:51:06,400 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
 2020-07-20 14:51:06,419 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-20 15:38:37,738 [main] INFO  vegas.env - 
+-=[vegas started successfully using the development profile]=- 
+2020-07-20 15:38:38,435 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-20 15:38:38,450 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-20 15:38:38,474 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-20 15:38:38,656 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-20 15:38:38,689 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 3000 
+2020-07-20 15:38:38,752 [main] INFO  luminus.http-server - server started on port 3000 
+2020-07-20 15:38:38,752 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.config/env started 
+2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.handler/init-app started 
+2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
+2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.core/http-server started 
+2020-07-20 15:38:38,775 [main] INFO  vegas.core - #'vegas.core/repl-server started 
+2020-07-20 15:39:13,163 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-20 15:39:13,922 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-20 15:39:13,937 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-20 15:39:14,042 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-20 15:39:14,061 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-20 15:39:59,093 [XNIO-1 I/O-1] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 

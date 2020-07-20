@@ -1,11 +1,11 @@
 goog.provide("goog.memoize");
 goog.memoize = function(f, opt_serializer) {
-  var serializer = opt_serializer || goog.memoize.simpleSerializer;
+  const serializer = opt_serializer || goog.memoize.simpleSerializer;
   return function() {
     if (goog.memoize.ENABLE_MEMOIZE) {
-      var thisOrGlobal = this || goog.global;
-      var cache = thisOrGlobal[goog.memoize.CACHE_PROPERTY_] || (thisOrGlobal[goog.memoize.CACHE_PROPERTY_] = {});
-      var key = serializer(goog.getUid(f), arguments);
+      const thisOrGlobal = this || goog.global;
+      const cache = thisOrGlobal[goog.memoize.CACHE_PROPERTY_] || (thisOrGlobal[goog.memoize.CACHE_PROPERTY_] = {});
+      const key = serializer(goog.getUid(f), arguments);
       return cache.hasOwnProperty(key) ? cache[key] : cache[key] = f.apply(this, arguments);
     } else {
       return f.apply(this, arguments);
@@ -18,8 +18,8 @@ goog.memoize.clearCache = function(cacheOwner) {
 };
 goog.memoize.CACHE_PROPERTY_ = "closure_memoize_cache_";
 goog.memoize.simpleSerializer = function(functionUid, args) {
-  var context = [functionUid];
-  for (var i = args.length - 1; i >= 0; --i) {
+  const context = [functionUid];
+  for (let i = args.length - 1; i >= 0; --i) {
     context.push(typeof args[i], args[i]);
   }
   return context.join("\x0B");
