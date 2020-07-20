@@ -1,0 +1,132 @@
+2020-07-20 14:48:39,575 [main] INFO  vegas.env - 
+-=[vegas started successfully using the development profile]=- 
+2020-07-20 14:48:39,960 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-20 14:48:39,972 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-20 14:48:39,990 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-20 14:48:40,097 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-20 14:48:40,119 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 3000 
+2020-07-20 14:48:40,151 [main] INFO  io.undertow - stopping server: Undertow - 2.1.3.Final 
+2020-07-20 14:48:40,156 [main] ERROR luminus.http-server - server failed to start on port: 3000 
+java.lang.RuntimeException: java.net.BindException: Address already in use: bind
+	at io.undertow.Undertow.start(Undertow.java:247)
+	at ring.adapter.undertow$run_undertow.invokeStatic(undertow.clj:139)
+	at ring.adapter.undertow$run_undertow.invoke(undertow.clj:101)
+	at luminus.http_server$start.invokeStatic(http_server.clj:13)
+	at luminus.http_server$start.invoke(http_server.clj:11)
+	at vegas.core$eval12690$fn__12691.invoke(core.clj:26)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__441.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at mount.core$start_with_args.invokeStatic(core.cljc:389)
+	at mount.core$start_with_args.doInvoke(core.cljc:385)
+	at clojure.lang.RestFn.invoke(RestFn.java:410)
+	at vegas.core$start_app.invokeStatic(core.clj:50)
+	at vegas.core$start_app.invoke(core.clj:49)
+	at vegas.core$_main.invokeStatic(core.clj:58)
+	at vegas.core$_main.doInvoke(core.clj:57)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at clojure.lang.Var.invoke(Var.java:380)
+	at user$eval12852.invokeStatic(form-init2579406942791800714.clj:1)
+	at user$eval12852.invoke(form-init2579406942791800714.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:7177)
+	at clojure.lang.Compiler.eval(Compiler.java:7167)
+	at clojure.lang.Compiler.load(Compiler.java:7636)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7574)
+	at clojure.main$load_script.invokeStatic(main.clj:475)
+	at clojure.main$init_opt.invokeStatic(main.clj:477)
+	at clojure.main$init_opt.invoke(main.clj:477)
+	at clojure.main$initialize.invokeStatic(main.clj:508)
+	at clojure.main$null_opt.invokeStatic(main.clj:542)
+	at clojure.main$null_opt.invoke(main.clj:539)
+	at clojure.main$main.invokeStatic(main.clj:664)
+	at clojure.main$main.doInvoke(main.clj:616)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.lang.Var.applyTo(Var.java:705)
+	at clojure.main.main(main.java:40)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.xnio.nio.NioXnioWorker.createTcpConnectionServer(NioXnioWorker.java:178)
+	at org.xnio.XnioWorker.createStreamConnectionServer(XnioWorker.java:310)
+	at io.undertow.Undertow.start(Undertow.java:193)
+	... 41 common frames omitted
+2020-07-20 14:48:40,157 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-20 14:48:40,158 [main] ERROR vegas.nrepl - failed to start nREPL 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.net.ServerSocket.bind(ServerSocket.java:344)
+	at nrepl.server$start_server.invokeStatic(server.clj:142)
+	at nrepl.server$start_server.doInvoke(server.clj:109)
+	at clojure.lang.RestFn.invoke(RestFn.java:1096)
+	at vegas.nrepl$start.invokeStatic(nrepl.clj:14)
+	at vegas.nrepl$start.invoke(nrepl.clj:6)
+	at vegas.core$eval12706$fn__12707.invoke(core.clj:37)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__441.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at mount.core$start_with_args.invokeStatic(core.cljc:389)
+	at mount.core$start_with_args.doInvoke(core.cljc:385)
+	at clojure.lang.RestFn.invoke(RestFn.java:410)
+	at vegas.core$start_app.invokeStatic(core.clj:50)
+	at vegas.core$start_app.invoke(core.clj:49)
+	at vegas.core$_main.invokeStatic(core.clj:58)
+	at vegas.core$_main.doInvoke(core.clj:57)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at clojure.lang.Var.invoke(Var.java:380)
+	at user$eval12852.invokeStatic(form-init2579406942791800714.clj:1)
+	at user$eval12852.invoke(form-init2579406942791800714.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:7177)
+	at clojure.lang.Compiler.eval(Compiler.java:7167)
+	at clojure.lang.Compiler.load(Compiler.java:7636)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7574)
+	at clojure.main$load_script.invokeStatic(main.clj:475)
+	at clojure.main$init_opt.invokeStatic(main.clj:477)
+	at clojure.main$init_opt.invoke(main.clj:477)
+	at clojure.main$initialize.invokeStatic(main.clj:508)
+	at clojure.main$null_opt.invokeStatic(main.clj:542)
+	at clojure.main$null_opt.invoke(main.clj:539)
+	at clojure.main$main.invokeStatic(main.clj:664)
+	at clojure.main$main.doInvoke(main.clj:616)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.lang.Var.applyTo(Var.java:705)
+	at clojure.main.main(main.java:40)
+2020-07-20 14:49:20,917 [main] INFO  vegas.env - 
+-=[vegas started successfully using the development profile]=- 
+2020-07-20 14:49:21,445 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-20 14:49:21,462 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-20 14:49:21,483 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-20 14:49:21,620 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-20 14:49:21,653 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 3000 
+2020-07-20 14:49:21,702 [main] INFO  luminus.http-server - server started on port 3000 
+2020-07-20 14:49:21,702 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-20 14:49:21,719 [main] INFO  vegas.core - #'vegas.config/env started 
+2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.handler/init-app started 
+2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
+2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.core/http-server started 
+2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.core/repl-server started 
+2020-07-20 14:51:05,505 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-20 14:51:06,262 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-20 14:51:06,278 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-20 14:51:06,400 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-20 14:51:06,419 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
