@@ -17,13 +17,14 @@
                  [com.google.javascript/closure-compiler-unshaded "v20200504" :scope "provided"]
                  [cprop "0.1.17"]
                  [day8.re-frame/http-fx "0.1.6"]
+                 [day8.re-frame/re-frame-10x "0.4.3"]
                  [expound "0.8.5"]
                  [funcool/struct "1.4.0"]
                  [luminus-transit "0.1.2"]
                  [luminus-undertow "0.1.6"]
                  [luminus/ring-ttl-session "0.3.3"]
                  [markdown-clj "1.10.5"]
-                 [metasoarous/oz "1.6.0-alpha11"]
+                 [metasoarous/oz "1.6.0-alpha13"]
                  [metosin/jsonista "0.2.6"]
                  [metosin/muuntaja "0.6.7"]
                  [metosin/reitit "0.5.5"]
@@ -60,22 +61,23 @@
   :clean-targets ^{:protect false}
   [:target-path "target/cljsbuild"]
   :shadow-cljs
-  {:nrepl {:port 7002}
+  {:dependencies [[metasoarous/oz "1.6.0-alpha2"]]
+   :nrepl        {:port 7002}
    :builds
-          {:app
-           {:target     :browser
-            :output-dir "target/cljsbuild/public/js"
-            :asset-path "/js"
-            :compiler-options {:output-feature-set :es6}
-            :modules    {:app {:entries [vegas.app]}}
-            :devtools
-                        {:watch-dir "resources/public" :preloads [re-frisk.preload]}
-            :dev
-                        {:closure-defines {"re_frame.trace.trace_enabled_QMARK_" true}}}
-           :test
-           {:target    :node-test
-            :output-to "target/test/test.js"
-            :autorun   true}}}
+                 {:app
+                  {:target           :browser
+                   :output-dir       "target/cljsbuild/public/js"
+                   :asset-path       "/js"
+                   :compiler-options {:output-feature-set :es6}
+                   :modules          {:app {:entries [vegas.app]}}
+                   :devtools
+                                     {:watch-dir "resources/public" :preloads [re-frisk.preload]}
+                   :dev
+                                     {:closure-defines {"re_frame.trace.trace_enabled_QMARK_" true}}}
+                  :test
+                  {:target    :node-test
+                   :output-to "target/test/test.js"
+                   :autorun   true}}}
 
   :npm-deps []
   :npm-dev-deps [[xmlhttprequest "1.8.0"]]

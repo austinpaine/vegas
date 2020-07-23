@@ -1,67 +1,13 @@
-2020-07-20 14:48:39,575 [main] INFO  vegas.env - 
+2020-07-22 09:33:13,016 [main] INFO  vegas.env - 
 -=[vegas started successfully using the development profile]=- 
-2020-07-20 14:48:39,960 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
-2020-07-20 14:48:39,972 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
-2020-07-20 14:48:39,990 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
-2020-07-20 14:48:40,097 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
-2020-07-20 14:48:40,119 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 3000 
-2020-07-20 14:48:40,151 [main] INFO  io.undertow - stopping server: Undertow - 2.1.3.Final 
-2020-07-20 14:48:40,156 [main] ERROR luminus.http-server - server failed to start on port: 3000 
-java.lang.RuntimeException: java.net.BindException: Address already in use: bind
-	at io.undertow.Undertow.start(Undertow.java:247)
-	at ring.adapter.undertow$run_undertow.invokeStatic(undertow.clj:139)
-	at ring.adapter.undertow$run_undertow.invoke(undertow.clj:101)
-	at luminus.http_server$start.invokeStatic(http_server.clj:13)
-	at luminus.http_server$start.invoke(http_server.clj:11)
-	at vegas.core$eval12690$fn__12691.invoke(core.clj:26)
-	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
-	at mount.core$record_BANG_.invoke(core.cljc:73)
-	at mount.core$up$fn__441.invoke(core.cljc:81)
-	at mount.core$up.invokeStatic(core.cljc:80)
-	at mount.core$up.invoke(core.cljc:78)
-	at mount.core$bring.invokeStatic(core.cljc:247)
-	at mount.core$bring.invoke(core.cljc:239)
-	at mount.core$start.invokeStatic(core.cljc:289)
-	at mount.core$start.doInvoke(core.cljc:281)
-	at clojure.lang.RestFn.invoke(RestFn.java:397)
-	at mount.core$start_with_args.invokeStatic(core.cljc:389)
-	at mount.core$start_with_args.doInvoke(core.cljc:385)
-	at clojure.lang.RestFn.invoke(RestFn.java:410)
-	at vegas.core$start_app.invokeStatic(core.clj:50)
-	at vegas.core$start_app.invoke(core.clj:49)
-	at vegas.core$_main.invokeStatic(core.clj:58)
-	at vegas.core$_main.doInvoke(core.clj:57)
-	at clojure.lang.RestFn.invoke(RestFn.java:397)
-	at clojure.lang.Var.invoke(Var.java:380)
-	at user$eval12852.invokeStatic(form-init2579406942791800714.clj:1)
-	at user$eval12852.invoke(form-init2579406942791800714.clj:1)
-	at clojure.lang.Compiler.eval(Compiler.java:7177)
-	at clojure.lang.Compiler.eval(Compiler.java:7167)
-	at clojure.lang.Compiler.load(Compiler.java:7636)
-	at clojure.lang.Compiler.loadFile(Compiler.java:7574)
-	at clojure.main$load_script.invokeStatic(main.clj:475)
-	at clojure.main$init_opt.invokeStatic(main.clj:477)
-	at clojure.main$init_opt.invoke(main.clj:477)
-	at clojure.main$initialize.invokeStatic(main.clj:508)
-	at clojure.main$null_opt.invokeStatic(main.clj:542)
-	at clojure.main$null_opt.invoke(main.clj:539)
-	at clojure.main$main.invokeStatic(main.clj:664)
-	at clojure.main$main.doInvoke(main.clj:616)
-	at clojure.lang.RestFn.applyTo(RestFn.java:137)
-	at clojure.lang.Var.applyTo(Var.java:705)
-	at clojure.main.main(main.java:40)
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.xnio.nio.NioXnioWorker.createTcpConnectionServer(NioXnioWorker.java:178)
-	at org.xnio.XnioWorker.createStreamConnectionServer(XnioWorker.java:310)
-	at io.undertow.Undertow.start(Undertow.java:193)
-	... 41 common frames omitted
-2020-07-20 14:48:40,157 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
-2020-07-20 14:48:40,158 [main] ERROR vegas.nrepl - failed to start nREPL 
+2020-07-22 09:33:13,623 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:33:13,639 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:33:13,661 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:33:13,836 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:33:13,871 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 4000 
+2020-07-22 09:33:13,931 [main] INFO  luminus.http-server - server started on port 4000 
+2020-07-22 09:33:13,932 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-22 09:33:13,937 [main] ERROR vegas.nrepl - failed to start nREPL 
 java.net.BindException: Address already in use: JVM_Bind
 	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
@@ -74,7 +20,7 @@ java.net.BindException: Address already in use: JVM_Bind
 	at clojure.lang.RestFn.invoke(RestFn.java:1096)
 	at vegas.nrepl$start.invokeStatic(nrepl.clj:14)
 	at vegas.nrepl$start.invoke(nrepl.clj:6)
-	at vegas.core$eval12706$fn__12707.invoke(core.clj:37)
+	at vegas.core$eval12775$fn__12776.invoke(core.clj:37)
 	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
 	at mount.core$record_BANG_.invoke(core.cljc:73)
 	at mount.core$up$fn__441.invoke(core.cljc:81)
@@ -94,8 +40,8 @@ java.net.BindException: Address already in use: JVM_Bind
 	at vegas.core$_main.doInvoke(core.clj:57)
 	at clojure.lang.RestFn.invoke(RestFn.java:397)
 	at clojure.lang.Var.invoke(Var.java:380)
-	at user$eval12852.invokeStatic(form-init2579406942791800714.clj:1)
-	at user$eval12852.invoke(form-init2579406942791800714.clj:1)
+	at user$eval12921.invokeStatic(form-init955233177816060018.clj:1)
+	at user$eval12921.invoke(form-init955233177816060018.clj:1)
 	at clojure.lang.Compiler.eval(Compiler.java:7177)
 	at clojure.lang.Compiler.eval(Compiler.java:7167)
 	at clojure.lang.Compiler.load(Compiler.java:7636)
@@ -111,42 +57,91 @@ java.net.BindException: Address already in use: JVM_Bind
 	at clojure.lang.RestFn.applyTo(RestFn.java:137)
 	at clojure.lang.Var.applyTo(Var.java:705)
 	at clojure.main.main(main.java:40)
-2020-07-20 14:49:20,917 [main] INFO  vegas.env - 
+2020-07-22 09:34:07,013 [main] INFO  vegas.env - 
 -=[vegas started successfully using the development profile]=- 
-2020-07-20 14:49:21,445 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
-2020-07-20 14:49:21,462 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
-2020-07-20 14:49:21,483 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
-2020-07-20 14:49:21,620 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
-2020-07-20 14:49:21,653 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 3000 
-2020-07-20 14:49:21,702 [main] INFO  luminus.http-server - server started on port 3000 
-2020-07-20 14:49:21,702 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
-2020-07-20 14:49:21,719 [main] INFO  vegas.core - #'vegas.config/env started 
-2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.handler/init-app started 
-2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
-2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.core/http-server started 
-2020-07-20 14:49:21,720 [main] INFO  vegas.core - #'vegas.core/repl-server started 
-2020-07-20 14:51:05,505 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
-2020-07-20 14:51:06,262 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
-2020-07-20 14:51:06,278 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
-2020-07-20 14:51:06,400 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
-2020-07-20 14:51:06,419 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
-2020-07-20 15:38:37,738 [main] INFO  vegas.env - 
+2020-07-22 09:34:07,652 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:34:07,665 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:34:07,688 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:34:07,834 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:34:07,870 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 4000 
+2020-07-22 09:34:07,931 [main] INFO  luminus.http-server - server started on port 4000 
+2020-07-22 09:34:07,931 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-22 09:34:07,955 [main] INFO  vegas.core - #'vegas.config/env started 
+2020-07-22 09:34:07,955 [main] INFO  vegas.core - #'vegas.handler/init-app started 
+2020-07-22 09:34:07,955 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
+2020-07-22 09:34:07,956 [main] INFO  vegas.core - #'vegas.core/http-server started 
+2020-07-22 09:34:07,956 [main] INFO  vegas.core - #'vegas.core/repl-server started 
+2020-07-22 09:34:44,723 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:34:45,514 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:34:45,530 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:34:45,636 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:34:45,656 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 09:37:08,519 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:37:09,259 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:37:09,275 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:37:09,381 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:37:09,403 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 09:38:38,243 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:38:38,999 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:38:39,013 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:38:39,117 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:38:39,135 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 09:40:18,950 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:40:19,761 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:40:19,779 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:40:19,898 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:40:19,918 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 09:41:18,577 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 09:41:19,288 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 09:41:19,304 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 09:41:19,411 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 09:41:19,432 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 09:43:25,868 [XNIO-1 I/O-3] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 
+2020-07-22 12:10:59,189 [main] INFO  vegas.env - 
 -=[vegas started successfully using the development profile]=- 
-2020-07-20 15:38:38,435 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
-2020-07-20 15:38:38,450 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
-2020-07-20 15:38:38,474 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
-2020-07-20 15:38:38,656 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
-2020-07-20 15:38:38,689 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 3000 
-2020-07-20 15:38:38,752 [main] INFO  luminus.http-server - server started on port 3000 
-2020-07-20 15:38:38,752 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
-2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.config/env started 
-2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.handler/init-app started 
-2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
-2020-07-20 15:38:38,774 [main] INFO  vegas.core - #'vegas.core/http-server started 
-2020-07-20 15:38:38,775 [main] INFO  vegas.core - #'vegas.core/repl-server started 
-2020-07-20 15:39:13,163 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
-2020-07-20 15:39:13,922 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
-2020-07-20 15:39:13,937 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
-2020-07-20 15:39:14,042 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
-2020-07-20 15:39:14,061 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
-2020-07-20 15:39:59,093 [XNIO-1 I/O-1] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 
+2020-07-22 12:10:59,871 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 12:10:59,886 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 12:10:59,906 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 12:11:00,075 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 12:11:00,105 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 4000 
+2020-07-22 12:11:00,167 [main] INFO  luminus.http-server - server started on port 4000 
+2020-07-22 12:11:00,167 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-22 12:11:00,187 [main] INFO  vegas.core - #'vegas.config/env started 
+2020-07-22 12:11:00,187 [main] INFO  vegas.core - #'vegas.handler/init-app started 
+2020-07-22 12:11:00,187 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
+2020-07-22 12:11:00,187 [main] INFO  vegas.core - #'vegas.core/http-server started 
+2020-07-22 12:11:00,187 [main] INFO  vegas.core - #'vegas.core/repl-server started 
+2020-07-22 12:11:48,289 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 12:11:49,039 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 12:11:49,055 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 12:11:49,173 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 12:11:49,193 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 12:12:39,767 [XNIO-1 I/O-8] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 
+2020-07-22 15:30:22,524 [XNIO-1 I/O-5] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 
+2020-07-22 15:37:40,747 [XNIO-1 I/O-7] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 
+2020-07-22 17:07:42,787 [main] INFO  vegas.env - 
+-=[vegas started successfully using the development profile]=- 
+2020-07-22 17:07:43,667 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 17:07:43,684 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 17:07:43,716 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 17:07:43,901 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 17:07:43,940 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 4000 
+2020-07-22 17:07:44,010 [main] INFO  luminus.http-server - server started on port 4000 
+2020-07-22 17:07:44,010 [main] INFO  vegas.nrepl - starting nREPL server on port 7000 
+2020-07-22 17:07:44,035 [main] INFO  vegas.core - #'vegas.config/env started 
+2020-07-22 17:07:44,035 [main] INFO  vegas.core - #'vegas.handler/init-app started 
+2020-07-22 17:07:44,035 [main] INFO  vegas.core - #'vegas.handler/app-routes started 
+2020-07-22 17:07:44,035 [main] INFO  vegas.core - #'vegas.core/http-server started 
+2020-07-22 17:07:44,036 [main] INFO  vegas.core - #'vegas.core/repl-server started 
+2020-07-22 17:08:05,594 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 17:08:06,354 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 17:08:06,371 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 17:08:06,484 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 17:08:06,505 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 17:11:28,003 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2020-07-22 17:11:28,714 [main] INFO  io.undertow - starting server: Undertow - 2.1.3.Final 
+2020-07-22 17:11:28,729 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2020-07-22 17:11:28,837 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2020-07-22 17:11:28,856 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2020-07-22 17:13:24,446 [XNIO-1 I/O-7] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 
+2020-07-22 17:31:21,788 [XNIO-1 I/O-8] DEBUG i.undertow.websockets.core.extension - Negotiated extension WebSocketExtension{name='permessage-deflate', parameters=[]} for handshake WebSocketExtension{name='permessage-deflate', parameters=[{'client_max_window_bits': 'null'}]} 

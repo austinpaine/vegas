@@ -11,7 +11,8 @@
     [vegas.events]
     [reitit.core :as reitit]
     [reitit.frontend.easy :as rfe]
-    [clojure.string :as string])
+    [clojure.string :as string]
+    [vegas.main-page :refer [main-page]])
   (:import goog.History))
 
 (defn nav-link [uri title page]
@@ -24,7 +25,7 @@
   (r/with-let [expanded? (r/atom false)]
               [:nav.navbar.is-info>div.container
                [:div.navbar-brand
-                [:a.navbar-item {:href "/" :style {:font-weight :bold}} "vegas"]
+                [:a.navbar-item {:href "/" :style {:font-weight :bold}} "Wizards in Vegas"]
                 [:span.navbar-burger.burger
                  {:data-target :nav-menu
                   :on-click #(swap! expanded? not)
@@ -41,9 +42,7 @@
    [:img {:src "/img/warning_clojure.png"}]])
 
 (defn home-page []
-  [:section.section>div.container>div.content
-   (when-let [docs @(rf/subscribe [:docs])]
-     [:div {:dangerouslySetInnerHTML {:__html (md->html docs)}}])])
+  (main-page))
 
 (defn page []
   (if-let [page @(rf/subscribe [:common/page])]
@@ -77,4 +76,4 @@
 (defn init! []
   (start-router!)
   (ajax/load-interceptors!)
-  (mount-components))
+    (mount-components))
